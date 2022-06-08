@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { WallModule } from '../wall/wall.module';
 import { AppComponent } from './components/app/app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AppRoutingModule } from './core-routing.module';
@@ -17,7 +18,8 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WallModule
   ],
   providers: [],
   bootstrap: [AppComponent]

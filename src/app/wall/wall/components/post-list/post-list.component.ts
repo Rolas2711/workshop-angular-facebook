@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Post } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-post-list',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-  posts=[
+  posts:Post[]=[
     {
       "id": "d99d6201-c26b-57d1-bf74-8b548ef73301",
       "createdTime": "Sun May 01 2022 21:07:33 GMT+0200 (Central European Summer Time)",
