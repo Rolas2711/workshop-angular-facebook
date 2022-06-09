@@ -1,8 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HomePageComponent } from '../../pages/home-page/home-page.component';
+import { MenuComponent } from '../menu/menu.component';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { MenuComponent } from './menu/menu.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
