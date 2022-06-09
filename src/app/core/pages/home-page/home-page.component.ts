@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import FixturePosts from '../../../../fixtures/posts.fixtures.json'
+import { PostsService } from 'src/app/posts/services/posts.service';
+import { Sorter } from 'src/app/shared/helpers/sorter';
+import { Post } from 'src/app/wall/wall/interfaces/post.interface';
 
 @Component({
   selector: 'app-home-page',
@@ -7,10 +9,19 @@ import FixturePosts from '../../../../fixtures/posts.fixtures.json'
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  fakePosts= FixturePosts;
-  constructor() { }
+  isPostLoaded = false
+  posts: Post[] = []
+  constructor(private postsService: PostsService) { 
+    this.setupPosts();
+  }
 
   ngOnInit(): void {
+  }
+
+  private async setupPosts() {
+    const posts = await this.postsService.getPosts();
+    this.posts = Sorter.sortBy(posts);
+    this.isPostLoaded = true;
   }
 
 }

@@ -1,3 +1,5 @@
 <div class="container">
-    <app-post-list [posts]="fakePosts"></app-post-list>
+    <app-post-list [posts]="posts"></app-post-list>
+    <img src="../../../../assets/download.gif" *ngIf="!isPostLoaded">
+    <p *ngIf="isPostLoaded">Lista jest pusta</p>
 </div>

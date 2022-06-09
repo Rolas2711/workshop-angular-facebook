@@ -21,9 +21,6 @@ export class HighlightDirective {
     private el: ElementRef,
     private renderer: Renderer2
 
-  ) {
-    console.debug('test', el.nativeElement)
-    
-   }
+  ) {}
 
 }
