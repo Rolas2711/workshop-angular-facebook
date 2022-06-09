@@ -14,4 +14,14 @@ export class SinglePostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+   /**
+   * Example
+   *  /posts/<POST_ID>
+   */
+    getPostProfileUrl(): string {
+      // return '/posts/' + this.post?.id;
+      return `/posts/${this.post?.id}`;
+    }
+  
+
 }

@@ -10,6 +10,10 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
+    path: 'posts',
+    loadChildren: () => import('../wall/wall/wall-routing.module').then(m => m.PostsRoutingModule)
+  },
+  {
     path: '**',
     component: NotFoundPageComponent
   }
