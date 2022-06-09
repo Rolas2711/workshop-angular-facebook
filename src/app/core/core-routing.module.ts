@@ -3,24 +3,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
-
 const routes: Routes = [
   {
     path: '',
-    component: HomePageComponent
+    component: HomePageComponent,
   },
   {
     path: 'posts',
-    loadChildren: () => import('../wall/wall/wall-routing.module').then(m => m.PostsRoutingModule)
+    loadChildren: () =>
+      import('../wall/wall-routing.module').then(
+        (m) => m.PostsRoutingModule
+      ),
   },
   {
     path: '**',
-    component: NotFoundPageComponent
-  }
+    component: NotFoundPageComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

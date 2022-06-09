@@ -1,4 +1,4 @@
-import { Post } from "../app/wall/wall/interfaces/post.interface";
+import { Post } from "../app/wall/interfaces/post.interface";
 import { userFactory } from "./user.factory";
 
 export function postFactory(): Post {

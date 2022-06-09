@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import { delay, filter, lastValueFrom } from 'rxjs';
-import { Post } from 'src/app/wall/wall/interfaces/post.interface';
+import { Post } from 'src/app/wall/interfaces/post.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

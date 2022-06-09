@@ -7,21 +7,15 @@ import { AppRoutingModule } from './core-routing.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HomePageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    WallModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, WallModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

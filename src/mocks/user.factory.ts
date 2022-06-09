@@ -1,4 +1,4 @@
-import { User } from '../app/wall/wall/interfaces/user.interface';
+import { User } from '../app/wall/interfaces/user.interface';
 
 export function userFactory(): User {
   return {

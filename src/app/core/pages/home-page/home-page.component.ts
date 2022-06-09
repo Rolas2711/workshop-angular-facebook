@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from 'src/app/posts/services/posts.service';
 import { Sorter } from 'src/app/shared/helpers/sorter';
-import { Post } from 'src/app/wall/wall/interfaces/post.interface';
+import { Post } from 'src/app/wall/interfaces/post.interface';
 
 @Component({
   selector: 'app-home-page',
@@ -11,7 +11,7 @@ import { Post } from 'src/app/wall/wall/interfaces/post.interface';
 export class HomePageComponent implements OnInit {
   isPostLoaded = false
   posts: Post[] = []
-  constructor(private postsService: PostsService) { 
+  constructor(private postsService: PostsService) {
     this.setupPosts();
   }
 
