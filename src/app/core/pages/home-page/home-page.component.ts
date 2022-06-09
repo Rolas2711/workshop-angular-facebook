@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import FixturePosts from '../../../../fixtures/posts.fixtures.json'
 
 @Component({
   selector: 'app-home-page',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
+  fakePosts= FixturePosts;
   constructor() { }
 
   ngOnInit(): void {
