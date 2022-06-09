@@ -17,6 +17,12 @@ export class PostsService {
     return this.makeRequest<Post[]>(environment.postUrl);
   }
 
+  getPostsById(postId: string): Promise<Post > {
+    return this.makeRequest<Post>(
+      `${environment.postUrl}/${postId}`
+      );
+  }
+
   private fakeRequest<T>(_url?: string): Promise<T> {
     return new Promise((resolve) => {
       setTimeout(() => resolve([] as unknown as T), 2000);

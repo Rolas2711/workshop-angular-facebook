@@ -1,3 +1,6 @@
-<div class="container">
-  <app-single-post></app-single-post>
+<div class="container" *ngIf="post">
+  <app-single-post 
+    [post]="post"
+  ></app-single-post>
+  
 </div>
