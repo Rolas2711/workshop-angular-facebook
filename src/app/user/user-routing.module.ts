@@ -10,20 +10,24 @@ const routes: Routes = [
   {
     path: 'profile',
     component: UserProfilePageComponent,
-    canActivate: [OnlyForAuthUserGuard]
+    canActivate: [OnlyForAuthUserGuard],
+    title: 'Profile * FB'
   },
   {
     path: 'register',
-    component: SignUpPageComponent
+    component: SignUpPageComponent,
+    title: 'Register * FB'
   },
   {
     path: 'login',
-    component: SignInPageComponent
+    component: SignInPageComponent,
+    title: 'Login * FB'
   },
   {
     path: 'logout',
     component: SignOutPageComponent,
-    canActivate: [OnlyForAuthUserGuard]
+    canActivate: [OnlyForAuthUserGuard],
+    title: 'LogOut * FB'
   }
 ];
 
