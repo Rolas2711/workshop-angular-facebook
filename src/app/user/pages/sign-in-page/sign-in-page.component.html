@@ -1,0 +1,61 @@
+<div>
+    <form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()" >
+      <!-- <pre>{{ loginForm.errors | json}}</pre> -->
+      <div class="form-group">
+        <label>
+          E-mail
+          <sup class="text-danger">*</sup>
+        </label>
+        <input
+          required
+          type="email"
+          class="form-control field-email"
+          autocomplete="username"
+          name="email"
+          maxlength="50"
+          minlength="3"
+          [(ngModel)]="credentials.email"
+          #email="ngModel"
+        />
+        <!-- <pre>
+          {{email.dirty | json}}
+          {{email.dirty | json}}
+        </pre> -->
+        
+        <!-- <pre>{{email.errors | json}}</pre> -->
+        <small class="text-danger" >
+          <span *ngIf="email.errors?.['required']">Pole <em>email</em> jest puste</span>
+          <span> Pole <em>email</em> jest za długi</span>
+          <span *ngIf="email.errors?.['requiredLength']">Pole <em>email</em> za krótkie </span>
+        </small>
+      </div>
+      <div class="form-group">
+        <label>
+          Hasło
+          <sup class="text-danger">*</sup>
+        </label>
+        <input
+          required
+          type="password"
+          class="form-control field-password"
+          name="password"
+          autocomplete="current-password"
+          [(ngModel)]="credentials.password"
+          #password="ngModel"
+        />
+        <small class="text-danger">
+          <span *ngIf="password.errors?.['required']">Pole<em>password</em> jest puste</span>
+          <span>Pole <em>password</em> jest za długie</span>
+          <span>Pole <em>password</em> za krótkie</span>
+        </small>
+      </div>
+      <button
+      [disabled]="loginForm.invalid"
+        type="submit"
+        class="btn btn-primary submit-form"
+      >
+        Zaloguj się
+      </button>
+    </form>
+  </div>
+  
