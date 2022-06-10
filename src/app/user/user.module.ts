@@ -6,7 +6,7 @@ import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component
 import { UserProfilePageComponent } from './pages/user-profile-page/user-profile-page.component';
 import { SignOutPageComponent } from './pages/sign-out-page/sign-out-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }

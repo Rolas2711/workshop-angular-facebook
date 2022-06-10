@@ -23,10 +23,10 @@
         </pre> -->
         
         <!-- <pre>{{email.errors | json}}</pre> -->
-        <small class="text-danger" >
+        <small class="text-danger" *ngIf="email.dirty">
           <span *ngIf="email.errors?.['required']">Pole <em>email</em> jest puste</span>
-          <span> Pole <em>email</em> jest za długi</span>
-          <span *ngIf="email.errors?.['requiredLength']">Pole <em>email</em> za krótkie </span>
+          <span *ngIf="email.errors?.['maxlength']"> Pole <em>email</em> jest za długi</span>
+          <span *ngIf="email.errors?.['minlength']">Pole <em>email</em> za krótkie </span>
         </small>
       </div>
       <div class="form-group">
@@ -43,10 +43,8 @@
           [(ngModel)]="credentials.password"
           #password="ngModel"
         />
-        <small class="text-danger">
+        <small class="text-danger" *ngIf="password.dirty">
           <span *ngIf="password.errors?.['required']">Pole<em>password</em> jest puste</span>
-          <span>Pole <em>password</em> jest za długie</span>
-          <span>Pole <em>password</em> za krótkie</span>
         </small>
       </div>
       <button

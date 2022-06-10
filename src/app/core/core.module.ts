@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { UserModule } from '../user/user.module';
 import { WallModule } from '../wall/wall.module';
@@ -16,7 +16,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     HomePageComponent,
     NotFoundPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, WallModule, UserModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, WallModule, UserModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

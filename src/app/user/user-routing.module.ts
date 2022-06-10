@@ -12,11 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    component: SignInPageComponent
+    component: SignUpPageComponent
   },
   {
     path: 'login',
-    component: SignUpPageComponent
+    component: SignInPageComponent
   },
   {
     path: 'logout',
