@@ -1,1 +1,6 @@
-<p>sign-out-page works!</p>
+<ng-container *ngIf="isLogoutFinished">
+    <p class="alert alert-success">Wylogowano</p>
+</ng-container>
+<ng-container *ngIf="!isLogoutFinished">
+    <p class="alert alert-danger">Nie wylogowano</p>
+</ng-container>

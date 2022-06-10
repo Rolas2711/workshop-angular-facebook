@@ -16,6 +16,12 @@ export class UserService {
     return true;
   }
 
+  signOut(): boolean {
+    console.debug('User is Signing Out: ')
+    this.isLogged = false;
+    return true;
+  }
+
   addUser(user: UserData):boolean {
     console.debug('Add user: ', user.email);
     return true;

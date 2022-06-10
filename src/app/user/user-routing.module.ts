@@ -22,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'logout',
-    component: SignOutPageComponent
+    component: SignOutPageComponent,
+    canActivate: [OnlyForAuthUserGuard]
   }
 ];
 
