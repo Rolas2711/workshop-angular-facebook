@@ -7,6 +7,7 @@ import { PostsService } from '../posts/services/posts.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PostProfilePageComponent } from './pages/post-profile-page/post-profile-page.component';
 import { PostsRoutingModule } from './wall-routing.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { PostsRoutingModule } from './wall-routing.module';
     SinglePostComponent,
     PostProfilePageComponent,
   ],
-  imports: [CommonModule, SharedModule, HttpClientModule, PostsRoutingModule],
+  imports: [CommonModule, SharedModule, HttpClientModule, PostsRoutingModule, NgxPaginationModule],
   exports: [PostListComponent],
   providers: [PostsService],
 })
